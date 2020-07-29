@@ -14,19 +14,32 @@ namespace TravelWebsite.Controllers
         }
 
         [HttpPost]
-
         public ActionResult Index(Login login)
         {
             var x = c.Logins.FirstOrDefault(a => a.Email.Equals(login.Email) && a.Password.Equals(login.Password));
             if (x != null)
             {
-                return View("Admin");
+                return View("AdminDashboard");
             }
             else
             {
                 ViewBag.m = "Wrong Email or Password !!!";
                 return View();
             }
+        }
+
+        [HttpGet]
+        public ActionResult Reg()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Reg(Login login)
+        {
+            c.Logins.Add(login);
+            c.SaveChanges();
+            return View("Index");
         }
     }
 }
