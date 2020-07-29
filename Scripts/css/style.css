@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    background: linear-gradient(to right top, #8f94fb, #4e54c8);
+    background: linear-gradient(to right top, #44ddd0, #27d7a1);
 }
 
 html,
@@ -11,30 +11,42 @@ body {
 }
 
 /*Login*/
+.error {
+    font-size: 18px;
+}
+
 .centered-content {
     position: fixed;
     top: 50%;
     left: 50%;
+
     transform: translate(-50%, -50%);
 }
 
 .white-box {
+    width: 25rem;
     padding: 1rem 2rem;
+
     background: white;
     border-radius: 5px;
-    width: 25rem;
 }
 
 .title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #4e54c8;
+
+    color: #44ddd0;
+
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .btn-login {
-    background-color: #4e54c8;
+    background-color: #44ddd0;
     color: white;
+}
+
+.warning-pw {
+    font-size: 12px;
 }
