@@ -1,9 +1,4 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -11,8 +6,10 @@
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="~/Theme/css/nucleo-icons.css" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Scripts/css/_admin.css" />
     <link rel="stylesheet" href="~/Theme/css/black-dashboard.css" />
 </head>
+
 <body>
     <div class="wrapper">
         <div class="sidebar">
@@ -26,7 +23,7 @@
                     </a>
                 </div>
                 <ul class="nav">
-                    <li class="active">
+                    <li>
                         <a href="./dashboard.html">
                             <i class="tim-icons icon-chart-pie-36"></i>
                             <p>Dashboard</p>
@@ -38,7 +35,7 @@
                             <p>Package List</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="./map.html">
                             <i class="tim-icons icon-pin"></i>
                             <p>Add Package</p>
@@ -145,133 +142,7 @@
             <div class="content">
                 <div class="row">
                     <div class="col-md-12 pb-0">
-                        <div class="card ">
-                            <div class="card-header">
-                                <h4 class="card-title"> Simple Table</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table tablesorter " id="">
-                                        <thead class=" text-primary">
-                                            <tr>
-                                                <th>
-                                                    Name
-                                                </th>
-                                                <th>
-                                                    Country
-                                                </th>
-                                                <th>
-                                                    City
-                                                </th>
-                                                <th class="text-center">
-                                                    Salary
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    Dakota Rice
-                                                </td>
-                                                <td>
-                                                    Niger
-                                                </td>
-                                                <td>
-                                                    Oud-Turnhout
-                                                </td>
-                                                <td class="text-center">
-                                                    $36,738
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Minerva Hooper
-                                                </td>
-                                                <td>
-                                                    Curaçao
-                                                </td>
-                                                <td>
-                                                    Sinaai-Waas
-                                                </td>
-                                                <td class="text-center">
-                                                    $23,789
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Sage Rodriguez
-                                                </td>
-                                                <td>
-                                                    Netherlands
-                                                </td>
-                                                <td>
-                                                    Baileux
-                                                </td>
-                                                <td class="text-center">
-                                                    $56,142
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Philip Chaney
-                                                </td>
-                                                <td>
-                                                    Korea, South
-                                                </td>
-                                                <td>
-                                                    Overland Park
-                                                </td>
-                                                <td class="text-center">
-                                                    $38,735
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Doris Greene
-                                                </td>
-                                                <td>
-                                                    Malawi
-                                                </td>
-                                                <td>
-                                                    Feldkirchen in Kärnten
-                                                </td>
-                                                <td class="text-center">
-                                                    $63,542
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Mason Porter
-                                                </td>
-                                                <td>
-                                                    Chile
-                                                </td>
-                                                <td>
-                                                    Gloucester
-                                                </td>
-                                                <td class="text-center">
-                                                    $78,615
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Jon Porter
-                                                </td>
-                                                <td>
-                                                    Portugal
-                                                </td>
-                                                <td>
-                                                    Gloucester
-                                                </td>
-                                                <td class="text-center">
-                                                    $98,615
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                        @RenderBody()
                     </div>
                 </div>
             </div>
@@ -391,8 +262,6 @@
         });
     </script>
 
-    <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-
     <script>
         window.TrackJS &&
             TrackJS.install({
@@ -406,6 +275,7 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
 
     <!--  Notifications Plugin    -->
+    <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
     <script src="../assets/js/plugins/bootstrap-notify.js"></script>
     <script src="~/Theme/js/demo.js"></script>
 </body>
