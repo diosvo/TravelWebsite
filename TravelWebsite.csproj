@@ -164,6 +164,7 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Scripts\css\style.css" />
+    <Content Include="Scripts\css\_admin.css" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -288,14 +289,16 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Admin\Reg.cshtml" />
-    <Content Include="Views\Admin\AdminDashboard.cshtml" />
     <Content Include="Theme\font\nucleo.eot" />
     <Content Include="Theme\font\nucleo.ttf" />
     <Content Include="Theme\font\nucleo.woff" />
     <Content Include="Theme\font\nucleo.woff2" />
+    <Content Include="Views\Shared\_AdminLayoutPage.cshtml" />
+    <Content Include="Views\Admin\AddPackages.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
