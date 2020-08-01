@@ -1,18 +1,19 @@
-﻿@model TravelWebsite.Models.Package
+﻿@model TravelWebsite.Models.Services
+
 @{
-    ViewBag.Title = "AddPackages";
+    ViewBag.Title = "Add Services";
     Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
 }
 
 <div>
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title px-4 pt-3">Add Packages</h3>
+            <h3 class="card-title px-4 pt-3">Add Services</h3>
         </div>
 
         <div class="card-body">
             <div class="table-responsive">
-                @using (Html.BeginForm("AddPackages", "Admin", FormMethod.Post, htmlAttributes: new { enctype = "multipart/form-data" }))
+                @using (Html.BeginForm("Services", "Admin", FormMethod.Post, htmlAttributes: new { enctype = "multipart/form-data" }))
                 {
                     <table class="table tablesorter">
                         <thead class="text-primary">
@@ -34,15 +35,14 @@
                         <tbody>
                             <tr class="text-center">
                                 <td>
-                                    <select name="Offers" class="py-2 px-3">
-                                        <option>Select Offer</option>
-                                        <option>Bronze Offer</option>
-                                        <option>Silver Offer</option>
-                                        <option>Golden Offer</option>
-                                        <option>Premium Offer</option>
-                                        <option>Diamond Offer</option>
-                                        <option>Platinum Offer</option>
-                                        <option>Saphire Offer</option>
+                                    <select name="Service" class="py-2 px-3">
+                                        <option>Select Service</option>
+                                        <option>Bus</option>
+                                        <option>Train</option>
+                                        <option>Airplane</option>
+                                        <option>Hotels</option>
+                                        <option>Restaurant</option>
+                                        <option>Resort</option>
                                     </select>
                                 </td>
                                 <td>
@@ -54,10 +54,9 @@
                                 <td>
                                     <input type="submit" value="Add" class="btn btn-danger" />
                                 </td>
-
-                        </tbody>
+</tbody>
                     </table>
-                    <h3 class="text-danger d-flex justify-content-center align-items-center">@ViewBag.pk</h3>
+                    <h3 class="text-danger d-flex justify-content-center align-items-center">@ViewBag.sv</h3>
                 }
             </div>
         </div>
