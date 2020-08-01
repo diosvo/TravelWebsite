@@ -60,7 +60,7 @@
                     {
                         ID = c.Int(nullable: false, identity: true),
                         Service = c.String(nullable: false, maxLength: 40),
-                        Image = c.String(nullable: false, maxLength: 40),
+                        Image = c.String(),
                         Description = c.String(nullable: false, maxLength: 100),
                     })
                 .PrimaryKey(t => t.ID);

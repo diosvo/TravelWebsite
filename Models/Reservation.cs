@@ -70,8 +70,6 @@ namespace TravelWebsite.Models
         [MaxLength(40, ErrorMessage = "Max 40 char allowed")]
         public string Service { get; set; }
 
-        [Required]
-        [MaxLength(40, ErrorMessage = "Max 40 char allowed")]
         public string Image { get; set; }
 
         [Required]
@@ -95,6 +93,7 @@ namespace TravelWebsite.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
     }
+
 
     public class cs : DbContext
     {

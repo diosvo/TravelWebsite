@@ -48,7 +48,7 @@ namespace TravelWebsite.Controllers
 
         /* Packages */
         [HttpGet]
-        public ActionResult Packages()
+        public ActionResult AddPackages()
         {
             return View();
         }
@@ -75,15 +75,16 @@ namespace TravelWebsite.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddServices(Services services, string Services, HttpPostedFileBase image)
+        public ActionResult Services(Services ser, string service, HttpPostedFileBase image)
         {
             string picture = Path.Combine(Server.MapPath("~/Images"), image.FileName);
             image.SaveAs(picture);
-            services.Image = picture;
-            services.Service = Services;
-            c.Services.Add(services);
+            var pkg = c.Services.Where(e => e.Service == service);
+            ser.Image = picture;
+            ser.Service = service;
+            c.Services.Add(ser);
             c.SaveChanges();
-            ViewBag.sv = "Servicess added successfully";
+            ViewBag.sv = "Services added successfully !";
             return View();
         }
     }
