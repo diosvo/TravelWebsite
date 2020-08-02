@@ -31,7 +31,7 @@ namespace TravelWebsite.Controllers
             }
         }
 
-        /* Sign Up - Registration (Reg) */
+        #region  /* Sign Up - Registration (Reg) */
         [HttpGet]
         public ActionResult Reg()
         {
@@ -45,8 +45,16 @@ namespace TravelWebsite.Controllers
             c.SaveChanges();
             return View("Index");
         }
+        #endregion
 
-        /* Packages */
+        #region /* Packages */
+        [HttpGet]
+        public ActionResult PackagesList()
+        {
+            var x = c.Packages.ToList();
+            return View(x);
+        }
+
         [HttpGet]
         public ActionResult AddPackages()
         {
@@ -66,8 +74,16 @@ namespace TravelWebsite.Controllers
             ViewBag.pk = "Package added successfully !";
             return View();
         }
+        #endregion
 
-        /* Services */
+        #region /* Services */
+        [HttpGet]
+        public ActionResult ServicesList()
+        {
+            var x = c.Services.ToList();
+            return View(x);
+        }
+
         [HttpGet]
         public ActionResult Services()
         {
@@ -87,5 +103,6 @@ namespace TravelWebsite.Controllers
             ViewBag.sv = "Services added successfully !";
             return View();
         }
+        #endregion
     }
 }
