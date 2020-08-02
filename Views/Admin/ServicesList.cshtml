@@ -1,0 +1,55 @@
+﻿@model IEnumerable<TravelWebsite.Models.Services>
+
+@{
+    ViewBag.Title = "Services List";
+    Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+<div>
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title px-4 pt-3 m-0">Services List</h3>
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+                @using (Html.BeginForm("ServicesList", "Admin", FormMethod.Get))
+                {
+                    <table class="table tablesorter">
+                        <thead class="text-primary">
+                            <tr class="text-center">
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Service
+                                </th>
+                                <th>
+                                    Image
+                                </th>
+                                <th>
+                                    Description
+                                </th>
+                            </tr>
+                        </thead>
+                        @foreach (var s in Model)
+                        {
+                            var img = s.Image.Replace(Server.MapPath("~/Images"), "/Images");
+                            <tbody>
+                                <tr class="text-center">
+                                    <td>@s.ID</td>
+                                    <td>@s.Service</td>
+                                    <td>
+                                        <div>
+                                            <img src="@img" style="width: 50px" />
+                                        </div>
+                                    </td>
+                                    <td>@s.Description</td>
+                            </tbody>
+                        }
+                    </table>
+                }
+            </div>
+        </div>
+    </div>
+</div>
