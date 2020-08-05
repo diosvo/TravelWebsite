@@ -104,5 +104,14 @@ namespace TravelWebsite.Controllers
             return View();
         }
         #endregion
+
+        #region /* User Profile */
+        [HttpGet]
+        public ActionResult UserProfile()
+        {
+            var x = c.Logins.ToList();
+            return View(x);
+        }
+        #endregion
     }
 }
