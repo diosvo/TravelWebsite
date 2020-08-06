@@ -13,18 +13,14 @@ namespace TravelWebsite
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            // route trang chu
-            routes.MapRoute(
-                name: "trang chu",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Demo", action = "Demo", id = UrlParameter.Optional }
-            ) ;
-            // route user page
+            // Route User
             routes.MapRoute(
                 name: "Home",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "User", action = "Index", id = UrlParameter.Optional }
              );
+
+            // Route Admin
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

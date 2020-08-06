@@ -143,7 +143,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -176,6 +175,7 @@
     <Content Include="Image\hoian.jpg" />
     <Content Include="Image\hue.jpg" />
     <Content Include="Image\instagram.png" />
+    <Content Include="Image\logo.png" />
     <Content Include="Image\nhatrang.jpg" />
     <Content Include="Image\ninhbinh.jpg" />
     <Content Include="Image\phanthiet.jpg" />
@@ -198,11 +198,10 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Styles\css\style.css" />
-    <Content Include="Scripts\css\css_layout.css" />
-    <Content Include="Scripts\css\fontawesome.css" />
-    <Content Include="Scripts\css\jquery-ui.css" />
-    <Content Include="Scripts\css\style.css" />
+    <Content Include="Styles\css\_admin.css" />
+    <Content Include="Styles\user_css\_user.css" />
+    <Content Include="Styles\user_css\fontawesome.css" />
+    <Content Include="Styles\user_css\jquery-ui.css" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
