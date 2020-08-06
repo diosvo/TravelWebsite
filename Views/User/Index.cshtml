@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
+}
+
+<html>
+<head>
+    <script>
+        window.onscroll = function () { winScroll() };
+        function winScroll() {
+            var avgHeight = 1000;
+            var pos = window.pageYOffset;
+            if (pos >= 0 && pos < avgHeight - 400) {
+                document.getElementById("place").innerHTML = "Ha Noi";
+                document.getElementById("view").innerHTML = "View more Ha Noi tours";
+            }
+            else if (pos < avgHeight * 2 - 300) {
+                document.getElementById("place").innerHTML = "Sapa";
+                document.getElementById("view").innerHTML = "View more Sapa tours";
+            }
+            else if (pos < avgHeight * 3 - 300) {
+                document.getElementById("place").innerHTML = "Ha Long";
+                document.getElementById("view").innerHTML = "View more Ha Long tours";
+            }
+            else if (pos < avgHeight * 4 - 300) {
+                document.getElementById("place").innerHTML = "Ninh Binh";
+                document.getElementById("view").innerHTML = "View more Ninh Binh tours";
+            }
+            else if (pos < avgHeight * 5 - 300) {
+                document.getElementById("place").innerHTML = "Hue";
+                document.getElementById("view").innerHTML = "View more Hue tours";
+            }
+            else if (pos < avgHeight * 6 - 300) {
+                document.getElementById("place").innerHTML = "Hoi An";
+                document.getElementById("view").innerHTML = "View more Hoi An tours";
+            }
+            else if (pos < avgHeight * 7 - 200) {
+                document.getElementById("place").innerHTML = "Quy Nhon";
+                document.getElementById("view").innerHTML = "View more Quy Nhon tours";
+            }
+            else if (pos < avgHeight * 8 - 200) {
+                document.getElementById("place").innerHTML = "Nha Trang";
+                document.getElementById("view").innerHTML = "View more Nha Trang tours";
+            }
+            else if (pos < avgHeight * 9 - 100) {
+                document.getElementById("place").innerHTML = "Da Lat";
+                document.getElementById("view").innerHTML = "View more Da Lat tours";
+            }
+            else if (pos < avgHeight * 10 - 100) {
+                document.getElementById("place").innerHTML = "Phan Thiet";
+                document.getElementById("view").innerHTML = "View more Phan Thiet tours";
+            }
+            else if (pos < avgHeight * 11) {
+                document.getElementById("place").innerHTML = "Sai Gon";
+                document.getElementById("view").innerHTML = "View more Sai Gon tours";
+            }
+            else if (pos < avgHeight * 12 - 500) {
+                document.getElementById("place").innerHTML = "Phu Quoc";
+                document.getElementById("view").innerHTML = "View more Phu Quoc tours";
+            }
+            else {
+                document.getElementById("place").innerHTML = "Viet Nam";
+                document.getElementById("view").innerHTML = "View more tours";
+            }
+        }
+    </script>
+</head>
+<body onscroll="winScroll()">
+    <div class="container row d-flex justify-content-center align-items-center">
+        <div class="overlay align-items-center">
+            <p id="pos">The best place to visit in...</p>
+            <!--PLACE-->
+            <h1 id="place">Hanoi</h1>
+            <a id="view" href="#"></a>
+
+
+        </div>
+
+        <img src="~/Image/hanoi.jpg" id="v1"/>
+        <img src="~/Image/sapa.jpg" id="v2"/>
+        <img src="~/Image/halong.jpg" id="v3"/>
+        <img src="~/Image/ninhbinh.jpg" id="v4"/>
+        <img src="~/Image/hue.jpg" id="v5" />
+        <img src="~/Image/hoian.jpg" id="v6"/>
+        <img src="~/Image/quynhon.jpg" id="v7"/>
+        <img src="~/Image/nhatrang.jpg" id="v8"/>
+        <img src="~/Image/dalat.jpg" id="v9"/>
+        <img src="~/Image/phanthiet.jpg" id="v10"/>
+        <img src="~/Image/hochiminh.jpg" id="v11"/>
+        <img src="~/Image/phuquoc.jpg" id="v12"/>
+    </div>
+</body>
+    
+</html>

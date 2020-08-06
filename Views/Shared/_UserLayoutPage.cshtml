@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewBag.Title = "_UserLayoutPage";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale = 1" />
+    <meta charset="utf-8" />
+    <!--CSS link-->
+    <link rel="stylesheet" href="~/Scripts/css/css_layout.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Scripts/css/fontawesome.css" />
+    <link rel="stylesheet" href="~/Scripts/css/jquery-ui.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--CSS link
+    #navbar navbar-expand-lg navbar-light bg-light justify-content-lg-center-->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="fixMenu">
+            <!--Brand-->
+            <a class="navbar-brand" href="#">Travel Guide</a>
+            <!--Navbar-->
+            <div class=" collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+<footer>
+    <div class="footer">
+        <div class="info">
+            <div class="left2 linkBlock source">
+                <span>Credit</span>
+                <a href="https://unsplash.com/">
+                    <img src="~/Image/unplash.png" alt="cnn" />
+                </a>
+                <br />
+                <a href="https://edition.cnn.com/travel">
+                    <img src="~/Image/cnntravel.png" alt="unplash" />
+                </a>
+                <br />
+            </div>
+
+            <div class="left2 linkBlock logo">
+                <span>contact us</span>
+                <div class="gg">
+                    <a href="mailto:quynhtram512@gmail.com">
+                        <img src="~/Image/google.png" alt="google+" />
+                    </a>
+                </div>
+                <div class="ins">
+                    <a href="https://www.instagram.com/">
+                        <img src="~/Image/instagram.png" alt="instagram" />
+                    </a>
+                </div>
+                <div class="fb">
+                    <a href="https://www.facebook.com/">
+                        <img src="~/Image/facebook.png" alt="facebook" />
+                    </a>
+                </div>
+                <div class="twt">
+                    <a href="https://twitter.com/?lang=vi">
+                        <img src="~/Image/twitter.png" alt="twitter" />
+                    </a>
+                </div>
+            </div>
+            <div class="left2 linkBlock">
+                <span>information</span>
+                <div>
+                    <p>GVHD: Lưu Hoàng Phương</p>
+                    <p> Sinh viên thực hiện: </p>
+                    <ul>
+                        <li>
+                            <div class="tt">
+                                Võ Thị Mỹ Nhung
+                                <span class="tooltiptext">MSSV:1751010102</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tt">
+                                Nguyễn Vũ Quỳnh Trâm
+                                <span class="tooltiptext">MSSV:1751010166</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
+
