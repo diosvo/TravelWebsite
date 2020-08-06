@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using Scrypt;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -26,12 +27,12 @@ namespace TravelWebsite.Controllers
             }
             else
             {
-                ViewBag.m = "Wrong Email or Password !!!";
+                ViewBag.m = "Email or Password is incorrect.";
                 return View();
             }
         }
 
-        #region  /* Sign Up - Registration (Reg) */
+        #region  /* Sign Up - Register (Reg) */
         [HttpGet]
         public ActionResult Reg()
         {
@@ -41,9 +42,24 @@ namespace TravelWebsite.Controllers
         [HttpPost]
         public ActionResult Reg(Login login)
         {
-            c.Logins.Add(login);
-            c.SaveChanges();
-            return View("Index");
+            ScryptEncoder encoder = new ScryptEncoder();
+
+            // Check if Email already register
+            var registerdEmail = (from c in c.Logins
+                                  where c.Email.Equals(login.Email)
+                                  select c).SingleOrDefault();
+
+            if (registerdEmail != null)
+            {
+                ViewBag.Error = "This email already registered.";
+                return View();
+            }
+            else
+            {
+                c.Logins.Add(login);
+                c.SaveChanges();
+                return View("Index");
+            }
         }
         #endregion
 

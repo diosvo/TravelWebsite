@@ -1,0 +1,182 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    font-family: 'Lato', sans-serif;
+}
+
+    header p {
+        margin-bottom: 0;
+        padding: 0.75rem 1rem;
+    }
+
+        header p:hover {
+            cursor: pointer;
+            opacity: 0.9;
+        }
+
+.container > img {
+    left: 0;
+    right: 0;
+}
+
+div.myFont {
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.overlay {
+    color: #fff;
+    position: fixed;
+    top: 25%;
+    left: 30%;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+    .overlay > p {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 40px;
+    }
+
+    .overlay > h1 {
+        transition: 0.5s;
+        font-size: 70px;
+        font-family: 'Playfair Display SC', serif;
+    }
+
+    .overlay > a {
+        margin-top: 50px;
+        padding: 4px 10px 4px 10px;
+        transition: 0.5s;
+        text-decoration: none;
+        color: #fff;
+        font-size: 25px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        border: 2px solid #fff;
+        opacity: 1;
+    }
+
+        .overlay > a:hover {
+            color: #000;
+            text-decoration: none;
+            border: 2px solid #000;
+        }
+
+footer {
+    border-top: thin #808080;
+    border-bottom: thin #808080;
+}
+
+.item {
+    border-left: solid;
+    border-right: solid;
+}
+    /*footer*/
+    .item > span {
+        color: #00ff90;
+        border-bottom: thin;
+    }
+
+.footer {
+    z-index: 1000;
+    background-color: #2f2f2f;
+    position: relative;
+}
+
+.info {
+    margin: 0 auto;
+    padding: 40px 15px 30px 15px;
+    color: #FFF;
+    font-size: 14px;
+    background: #000;
+    display: block;
+    overflow: hidden;
+}
+
+.left2 {
+    float: left;
+    border-left: 1px solid #FFF;
+    padding-left: 20px;
+}
+
+.source > img {
+    width: 180px;
+    height: 62px;
+}
+
+.linkBlock {
+    width: 350px;
+    margin-left: 50px;
+    line-height: 20px;
+}
+
+    .linkBlock span {
+        font-size: 18px;
+        letter-spacing: 1px;
+        border-bottom: 1px solid #FFF;
+        text-transform: uppercase;
+        display: block;
+        margin: 0 0 8px 0;
+        width: 180px;
+        color: #FFF;
+    }
+
+div.logo > div {
+    float: left;
+    overflow: hidden;
+}
+
+div.gg > a > img:hover {
+    background-color: #C33;
+    border-radius: 30px;
+}
+
+div.ins > a > img:hover {
+    background: linear-gradient(#F00,#C60,#F0F);
+    border-radius: 30px;
+}
+
+div.fb > a > img:hover {
+    background-color: #03F;
+    border-radius: 30px;
+}
+
+div.twt > a > img:hover {
+    background-color: #06F;
+    border-radius: 30px;
+}
+
+.tt .tooltiptext {
+    visibility: hidden;
+    background-color: #FFF;
+    color: #000;
+    padding: 8px 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    width: 120px;
+    position: absolute;
+    z-index: 1;
+}
+
+.user-img-container img {
+    width: 100%;
+}

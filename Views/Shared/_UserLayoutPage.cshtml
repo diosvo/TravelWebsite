@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "_UserLayoutPage";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale = 1" />
+    <meta charset="utf-8" />
+
+    <!--CSS link-->
+    <link rel="stylesheet" href="~/Styles/user_css/fontawesome.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Styles/user_css/_user.css" />
+    <link rel="stylesheet" href="~/Styles/user_css/jquery-ui.css" />
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+    <header class="bg-light">
+        <div class="pt-2" style="width: 100px; margin:0 auto; ">
+            <img src="~/Image/logo.png" width=100% />
+        </div>
+        <nav >
+            <div class="d-flex justify-content-center align-content-baseline">
+                <p @Url.Action()>Home</p>
+                <p>Blogs</p>
+                <p>About Us</p>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="info">
+                <div class="left2 linkBlock source">
+                    <span>Credit</span>
+                    <a href="https://unsplash.com/">
+                        <img src="~/Image/unplash.png" alt="cnn" />
+                    </a>
+                    <br />
+                    <a href="https://edition.cnn.com/travel">
+                        <img src="~/Image/cnntravel.png" alt="unplash" />
+                    </a>
+                    <br />
+                </div>
+
+                <div class="left2 linkBlock logo">
+                    <span>contact us</span>
+                    <div class="gg">
+                        <a href="mailto:quynhtram512@gmail.com">
+                            <img src="~/Image/google.png" alt="google+" />
+                        </a>
+                    </div>
+                    <div class="ins">
+                        <a href="https://www.instagram.com/">
+                            <img src="~/Image/instagram.png" alt="instagram" />
+                        </a>
+                    </div>
+                    <div class="fb">
+                        <a href="https://www.facebook.com/">
+                            <img src="~/Image/facebook.png" alt="facebook" />
+                        </a>
+                    </div>
+                    <div class="twt">
+                        <a href="https://twitter.com/?lang=vi">
+                            <img src="~/Image/twitter.png" alt="twitter" />
+                        </a>
+                    </div>
+                </div>
+                <div class="left2 linkBlock">
+                    <span>information</span>
+                    <div>
+                        <p>GVHD: Lưu Hoàng Phương</p>
+                        <p> Sinh viên thực hiện: </p>
+                        <ul>
+                            <li>
+                                <div class="tt">
+                                    Võ Thị Mỹ Nhung
+                                    <span class="tooltiptext">MSSV:1751010102</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tt">
+                                    Nguyễn Vũ Quỳnh Trâm
+                                    <span class="tooltiptext">MSSV:1751010166</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
