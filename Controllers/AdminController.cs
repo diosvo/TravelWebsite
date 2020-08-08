@@ -1,4 +1,5 @@
-﻿using Scrypt;
+﻿using Antlr.Runtime.Misc;
+using Scrypt;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -88,7 +89,17 @@ namespace TravelWebsite.Controllers
             c.Packages.Add(p);
             c.SaveChanges();
             ViewBag.pk = "Package added successfully !";
-            return View();
+            return RedirectToAction("PackagesList");
+        }
+
+        public ActionResult DeletePackage(int id)
+        {
+            var res = c.Packages.Where(x => x.ID == id).First();
+            c.Packages.Remove(res);
+            c.SaveChanges();
+
+            var list = c.Packages.ToList();
+            return View("PackagesList", list);
         }
         #endregion
 
@@ -117,6 +128,16 @@ namespace TravelWebsite.Controllers
             c.Services.Add(ser);
             c.SaveChanges();
             ViewBag.sv = "Services added successfully !";
+            return RedirectToAction("ServicesList");
+        }
+
+        public ActionResult DeleteService(int id)
+        {
+            var res = c.Services.Where(x => x.ID == id).First();
+            c.Services.Remove(res);
+            c.SaveChanges();
+
+            var list = c.Services.ToList();
             return View();
         }
         #endregion
@@ -157,9 +178,19 @@ namespace TravelWebsite.Controllers
                 c.Logins.Add(obj);
                 c.SaveChanges();
                 ViewBag.Error = "User added successfully !";
-                return View();
+                return RedirectToAction("UserProfile");
             }
 
+        }
+
+        public ActionResult DeleteUser(int id)
+        {
+            var res = c.Logins.Where(x => x.ID == id).First();
+            c.Logins.Remove(res);
+            c.SaveChanges();
+
+            var list = c.Logins.ToList();
+            return View("UserProfile", list);
         }
         #endregion
     }
