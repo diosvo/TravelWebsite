@@ -9,9 +9,9 @@
     <script>
         window.onscroll = function () { winScroll() };
         function winScroll() {
-            var avgHeight = 1000;
+            var avgHeight = 620;
             var pos = window.pageYOffset;
-            if (pos >= 0 && pos < avgHeight - 400) {
+            if (pos >= 0 && pos < avgHeight) {
                 document.getElementById("place").innerHTML = "Ha Noi";
                 document.getElementById("view").innerHTML = "View more Ha Noi tours";
             }
@@ -31,44 +31,20 @@
                 document.getElementById("place").innerHTML = "Hue";
                 document.getElementById("view").innerHTML = "View more Hue tours";
             }
-            else if (pos < avgHeight * 6 - 300) {
+            else if (pos < avgHeight * 6) {
                 document.getElementById("place").innerHTML = "Hoi An";
                 document.getElementById("view").innerHTML = "View more Hoi An tours";
             }
-            else if (pos < avgHeight * 7 - 200) {
+            else if (pos < avgHeight * 7) {
                 document.getElementById("place").innerHTML = "Quy Nhon";
                 document.getElementById("view").innerHTML = "View more Quy Nhon tours";
-            }
-            else if (pos < avgHeight * 8 - 200) {
-                document.getElementById("place").innerHTML = "Nha Trang";
-                document.getElementById("view").innerHTML = "View more Nha Trang tours";
-            }
-            else if (pos < avgHeight * 9 - 100) {
-                document.getElementById("place").innerHTML = "Da Lat";
-                document.getElementById("view").innerHTML = "View more Da Lat tours";
-            }
-            else if (pos < avgHeight * 10 - 100) {
-                document.getElementById("place").innerHTML = "Phan Thiet";
-                document.getElementById("view").innerHTML = "View more Phan Thiet tours";
-            }
-            else if (pos < avgHeight * 11) {
-                document.getElementById("place").innerHTML = "Sai Gon";
-                document.getElementById("view").innerHTML = "View more Sai Gon tours";
-            }
-            else if (pos < avgHeight * 12 - 500) {
-                document.getElementById("place").innerHTML = "Phu Quoc";
-                document.getElementById("view").innerHTML = "View more Phu Quoc tours";
-            }
-            else {
-                document.getElementById("place").innerHTML = "Viet Nam";
-                document.getElementById("view").innerHTML = "View more tours";
             }
         }
     </script>
 </head>
 <body onscroll="winScroll()">
     <div>
-        <div class="overlay" style="margin: 0 auto;">
+        <div class="overlay">
             <p id="pos">The best place to visit in</p>
             <!--PLACE-->
             <h1 id="place">Hanoi</h1>
@@ -83,11 +59,6 @@
             <img src="~/Image/hue.jpg" id="v5" />
             <img src="~/Image/hoian.jpg" id="v6" />
             <img src="~/Image/quynhon.jpg" id="v7" />
-            <img src="~/Image/nhatrang.jpg" id="v8" />
-            <img src="~/Image/dalat.jpg" id="v9" />
-            <img src="~/Image/phanthiet.jpg" id="v10" />
-            <img src="~/Image/hochiminh.jpg" id="v11" />
-            <img src="~/Image/phuquoc.jpg" id="v12" />
         </div>
 
     </div>

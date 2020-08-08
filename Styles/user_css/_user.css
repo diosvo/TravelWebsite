@@ -69,36 +69,15 @@ div.myFont {
         color: #fff;
         font-size: 25px;
         font-family: Georgia, "Times New Roman", Times, serif;
-        border: 2px solid #fff;
+        border: 1px solid #fff;
         opacity: 1;
     }
 
         .overlay > a:hover {
-            color: #000;
+            color: white;
             text-decoration: none;
-            border: 2px solid #000;
+            border: 1px solid #e79a27;
         }
-
-footer {
-    border-top: thin #808080;
-    border-bottom: thin #808080;
-}
-
-.item {
-    border-left: solid;
-    border-right: solid;
-}
-    /*footer*/
-    .item > span {
-        color: #00ff90;
-        border-bottom: thin;
-    }
-
-.footer {
-    z-index: 1000;
-    background-color: #2f2f2f;
-    position: relative;
-}
 
 .info {
     margin: 0 auto;
@@ -180,3 +159,13 @@ div.twt > a > img:hover {
 .user-img-container img {
     width: 100%;
 }
+
+.ql-title p {
+    color: #EFBC71;
+}
+
+    .ql-title p:hover {
+        cursor: pointer;
+        color: #e79a27;
+        transition: 0.2s all ease-in-out;
+    }
