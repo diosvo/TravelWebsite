@@ -27,6 +27,9 @@
                                 <th>
                                     Password
                                 </th>
+                                <th>
+                                    Actions
+                                </th>
                             </tr>
                         </thead>
                         @foreach (var u in Model)
@@ -36,6 +39,13 @@
                                     <td>@u.ID</td>
                                     <td>@u.Email</td>
                                     <td>@u.Password</td>
+                                    <td class="text-center">
+                                        <div class="btn-group" role="group">
+                                            <button id="delete" class="btn btn-danger px-3 py-2">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                             </tbody>
                         }
                     </table>

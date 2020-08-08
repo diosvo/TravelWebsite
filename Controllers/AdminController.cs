@@ -51,7 +51,7 @@ namespace TravelWebsite.Controllers
 
             if (registerdEmail != null)
             {
-                ViewBag.Error = "This email already registered.";
+                ViewBag.Error = "This email already registered !";
                 return View();
             }
             else
@@ -127,6 +127,39 @@ namespace TravelWebsite.Controllers
         {
             var x = c.Logins.ToList();
             return View(x);
+        }
+
+        [HttpGet]
+        public ActionResult AddUser()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddUser(Login l)
+        {
+            // Check if Email already register
+            var registerdEmail = (from c in c.Logins
+                                  where c.Email.Equals(l.Email)
+                                  select c).SingleOrDefault();
+
+            if (registerdEmail != null)
+            {
+                ViewBag.Error = "This email already registered !";
+                return View();
+            }
+            else
+            {
+                Login obj = new Login();
+                obj.Email = l.Email;
+                obj.Password = l.Password;
+
+                c.Logins.Add(obj);
+                c.SaveChanges();
+                ViewBag.Error = "User added successfully !";
+                return View();
+            }
+
         }
         #endregion
     }

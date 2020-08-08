@@ -23,36 +23,80 @@
                     </a>
                 </div>
                 <ul class="nav">
-                    <li>
-                        <a href="@Url.Action("PackagesList")">
+                    <div class="packages">
+                        <p class="px-4 py-2">
                             <i class="tim-icons icon-bell-55"></i>
-                            <p>Package List</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("AddPackages")">
+                            <a class="text-uppercase" style="color: white; font-size: 11px;" data-toggle="collapse" href="#packageCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Packages
+                            </a>
+                        </p>
+                        <div class="collapse" id="packageCollapse">
+                            <div class="card">
+                                <ul class="p-2">
+                                    <li>
+                                        <a href="@Url.Action("AddPackages")">
+                                            <p>Add Package</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("PackagesList")">
+                                            <p>Package List</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="services">
+                        <p class="px-4 py-2">
                             <i class="tim-icons icon-pin"></i>
-                            <p>Add Package</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("ServicesList")">
-                            <i class="tim-icons icon-bell-55"></i>
-                            <p>Services List</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("Services")">
-                            <i class="tim-icons icon-pin"></i>
-                            <p>Add Service</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("UserProfile")">
+                            <a class="text-uppercase" style="color: white; font-size: 11px;" data-toggle="collapse" href="#serviceCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Services
+                            </a>
+                        </p>
+                        <div class="collapse" id="serviceCollapse">
+                            <div class="card">
+                                <ul class="p-2">
+                                    <li>
+                                        <a href="@Url.Action("Services")">
+                                            <p>Add Service</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("ServicesList")">
+                                            <p>Services List</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="px-4 py-2">
                             <i class="tim-icons icon-single-02"></i>
-                            <p>User Profile</p>
-                        </a>
-                    </li>
+                            <a class="text-uppercase" style="color: white; font-size: 11px;" data-toggle="collapse" href="#userCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                User
+                            </a>
+                        </p>
+                        <div class="collapse" id="userCollapse">
+                            <div class="card">
+                                <ul class="p-2">
+                                    <li>
+                                        <a href="@Url.Action("AddUser")">
+                                            <p>Add User</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("UserProfile")">
+                                            <p>User Profile</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -132,6 +176,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- End Navbar -->
             <div class="content">
                 <div class="row">
