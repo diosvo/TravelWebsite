@@ -50,8 +50,8 @@
                                     <td>@p.Description</td>
                                     <td class="text-center">
                                         <div class="btn-group" role="group">
-                                            <button id="delete" class="btn btn-danger px-3 py-2">
-                                                <i class="fas fa-trash-alt"></i>
+                                            <button class="btn btn-danger px-3 py-2">
+                                                <a href="@Url.Action("DeletePackage", new { p.ID})" style="color: white;">Delete</a>
                                             </button>
                                         </div>
                                     </td>
