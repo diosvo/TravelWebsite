@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TravelWebsite.Models;
+using System.Web.Helpers;
 
 namespace TravelWebsite.Controllers
 {
@@ -21,7 +22,8 @@ namespace TravelWebsite.Controllers
         [HttpPost]
         public ActionResult Index(Login login)
         {
-            var x = c.Logins.FirstOrDefault(a => a.Email.Equals(login.Email) && a.Password.Equals(login.Password));
+            var hashedPw = Crypto.Hash(login.Password);
+            var x = c.Logins.FirstOrDefault(a => a.Email.Equals(login.Email) && a.Password.Equals(hashedPw));
             if (x != null)
             {
                 return View("AddPackages");
@@ -43,13 +45,14 @@ namespace TravelWebsite.Controllers
         [HttpPost]
         public ActionResult Reg(Login login)
         {
-            ScryptEncoder encoder = new ScryptEncoder();
 
             // Check if Email already register
             var registerdEmail = (from c in c.Logins
                                   where c.Email.Equals(login.Email)
                                   select c).SingleOrDefault();
-
+            // Hash Password
+            var hashedPw = Crypto.Hash(login.Password);
+            login.Password = hashedPw;
             if (registerdEmail != null)
             {
                 ViewBag.Error = "This email already registered !";

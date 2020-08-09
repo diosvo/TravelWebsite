@@ -1,4 +1,8 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 
 namespace TravelWebsite.Controllers
 {
@@ -7,7 +11,7 @@ namespace TravelWebsite.Controllers
         // GET: User
         public ActionResult Index()
         {
-            return View("Index");
+            return View();
         }
     }
 }

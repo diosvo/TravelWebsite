@@ -1,0 +1,174 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+#fixMenu{
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0.7;
+}
+
+<<<<<<< Updated upstream:Scripts/css/css_layout.css
+.container > img{
+=======
+header p {
+margin-bottom: 0;
+padding: 0.75rem 1rem;
+}
+
+header p:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.container > img {
+>>>>>>> Stashed changes:Styles/user_css/_user.css
+    left: 0;
+    right:0;
+}
+div.myFont{
+    font-size: larger;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.overlay {
+    visibility:visible;
+    color: #fff;
+    position: fixed;
+    top: 25%;
+    left: 30%;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s;
+}
+<<<<<<< Updated upstream:Scripts/css/css_layout.css
+.overlay > p {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 40px;
+}
+.overlay > h1 {
+    transition:0.5s;
+    font-size: 70px;
+    font-family: 'Playfair Display SC', serif;
+}
+.overlay > a {
+    margin-top: 50px;
+    padding: 4px 10px 4px 10px;
+    transition: 0.5s;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border: 2px solid #fff;
+    opacity: 1;
+}
+.overlay > a:hover {
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #000;
+}
+
+footer{
+    border-top:thin #808080;
+    border-bottom:thin #808080;
+}
+.item{
+    border-left: solid;
+    border-right: solid;
+}
+/*footer*/
+.item > span{
+    color: #00ff90;
+    border-bottom:thin;
+}
+.footer {
+    z-index:1000;
+    background-color: #2f2f2f;
+    position: relative;
+=======
+
+.overlay > p {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 40px;
+}
+
+.overlay > h1 {
+    transition: 0.5s;
+    font-size: 70px;
+    font-family: 'Playfair Display SC', serif;
+>>>>>>> Stashed changes:Styles/user_css/_user.css
+}
+
+.overlay > a {
+    margin-top: 50px;
+    padding: 4px 10px 4px 10px;
+    transition: 0.5s;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border: 2px solid #fff;
+    opacity: 1;
+}
+
+.overlay > a:hover {
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #000;
+}
+
+
+
+
+<<<<<<< Updated upstream:Scripts/css/css_layout.css
+    .linkBlock div, p {
+        color: #FFF;
+        font-size: 18px;
+        font-family: "Times New Roman", Times, serif;
+    }
+
+div.logo > div {
+    float: left;
+    overflow: hidden;
+=======
+.user-img-container img {
+    width: 100%;
+>>>>>>> Stashed changes:Styles/user_css/_user.css
+}
+
+
+/*footer*/
+footer{
+    z-index: 1;
+}
+footer > div{
+    border-bottom:dotted 2px #00ff90;
+}
+footer > div > span{
+    color: #fff;
+    padding: 15px 0px;
+}
+div.item {
+    padding: 2% 10%;
+    align-items: center;
+    text-align: center;
+<<<<<<< Updated upstream:Scripts/css/css_layout.css
+    font-size: 12px;
+    font-weight: bold;
+    width: 120px;
+    position: absolute;
+    z-index: 1;
+=======
+}
+a.rounded-pill{
+    margin:10px;
+    padding: 7px 12px;
+>>>>>>> Stashed changes:Styles/user_css/_user.css
+}
