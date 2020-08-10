@@ -147,9 +147,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202008010609559_InitialCreate.cs" />
-    <Compile Include="Migrations\202008010609559_InitialCreate.designer.cs">
-      <DependentUpon>202008010609559_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202008100911283_InitialCreate.cs" />
+    <Compile Include="Migrations\202008100911283_InitialCreate.designer.cs">
+      <DependentUpon>202008100911283_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Reservation.cs" />
@@ -350,8 +350,8 @@
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202008010609559_InitialCreate.resx">
-      <DependentUpon>202008010609559_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008100911283_InitialCreate.resx">
+      <DependentUpon>202008100911283_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

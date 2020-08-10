@@ -19,6 +19,9 @@
                         <thead class="text-primary">
                             <tr class="text-center">
                                 <th>
+                                    #
+                                </th>
+                                <th>
                                     Email
                                 </th>
                                 <th>
@@ -31,6 +34,9 @@
                         </thead>
                         <tbody>
                             <tr class="text-center">
+                                <td class="form-group">
+                                    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+                                </td>
                                 <td class="form-group">
                                     @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
                                 </td>

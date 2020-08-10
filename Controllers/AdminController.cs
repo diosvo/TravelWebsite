@@ -160,12 +160,15 @@ namespace TravelWebsite.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddUser(Login l)
+        public ActionResult AddUser(Login login)
         {
             // Check if Email already register
             var registerdEmail = (from c in c.Logins
-                                  where c.Email.Equals(l.Email)
+                                  where c.Email.Equals(login.Email)
                                   select c).SingleOrDefault();
+            // Hash Password
+            var hashedPw = Crypto.Hash(login.Password);
+            login.Password = hashedPw;
 
             if (registerdEmail != null)
             {
@@ -175,8 +178,8 @@ namespace TravelWebsite.Controllers
             else
             {
                 Login obj = new Login();
-                obj.Email = l.Email;
-                obj.Password = l.Password;
+                obj.Email = login.Email;
+                obj.Password = login.Password;
 
                 c.Logins.Add(obj);
                 c.SaveChanges();
