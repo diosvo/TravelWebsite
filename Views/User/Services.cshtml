@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TravelWebsite.Models.Services>
+@{
+    ViewBag.Title = "Services";
+    Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
+}
+
+<link rel="stylesheet" href="~/Styles/user_css/w3.css">
+<h2>Services</h2>
+<div class="main" style="margin-top:20%"></div>
+<h1 style="text-align:center;">Ours Services</h1>
+<section class="feature-services col-12" style="margin-top: 30px;">
+    <div id="Packages" class="row container" style="margin-left:100px">
+        @foreach (var item in Model)
+        {
+            var img = item.Image.Replace(Server.MapPath("~/Images"), "/Images");
+            <div class="col-lg-4 col-md-6 mt-lg-0 mt-5 w3-row-padding">
+                <div class="agile-services-grid">
+                    <div class="w3-col">
+                        <div>
+                            <figure><img src="@img" style="height:200px;" class="user-img-container" /></figure>
+                        </div>
+                    </div>
+                </div>
+                <h4>@item.Service</h4>
+                <h3>@item.Description</h3>
+            </div>
+        }
+    </div>
+</section>
+<!--Our client-->
+<div class="pt-lg-5 pb-lg-0 pb-4">
+    <div class="container">
+        <h3 class="text-center mb-md-5 mb-3">Our Client</h3>
+        <div class="row">
+            <!--IMAGE 1-->
+            <div class="col-lg-6">
+                <div class="w3-card-4" style="width:75%; margin:0 15%">
+                    <div class="w3-container w3-padding">
+                        <img src="~/Image/marthnyuq.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:30%">
+                        <h4>Client 1</h4>
+                        <h3>Marthnyuq</h3>
+                        <p>Méo Meo mèo meo</p><br>
+                    </div>
+                </div>
+            </div>
+            <!--iMAGE 2-->
+            <div class="col-lg-6">
+                <div class="w3-card-4" style="width:75%; margin:0 15%">
+                    <div class="w3-container w3-padding">
+                        <img src="~/Image/diosvo.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:30%">
+                        <h4>Client 2</h4>
+                        <h3>Dios Vo</h3>
+                        <p>Méo Meo mèo meo</p><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

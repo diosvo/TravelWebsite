@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TravelWebsite.Models.Package>
+@{
+    ViewBag.Title = "Packages";
+    Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
+}
+
+<h2>Packages</h2>
+
+<div class="main" style="margin-top: 50px;"></div>
+<h1 style="text-align:center;">Our packages</h1>
+<section class="col-12" style="margin-top:30px;">
+    <div id="Packages" class="row container" style="margin-left:100px;">
+        @foreach(var item in Model)
+        {
+            var img = item.Image.Replace(Server.MapPath("~/Images"), "/Images");
+            <div class="col-lg-4">
+                <div class="thumpnail card">
+                    <div class="card-body">
+                        <h4 class="card-title inner list-group-item">
+                            @item.Offer;
+                        </h4>
+                    </div>
+                    <div class="img-holder">
+                        <img class="img-fluid col-lg-12" src="@img" alt="" style="width:100%;height:200px;"/>
+                    </div>
+                    <div class="figure-caption card-body">
+                        <p class="card-title inner list-group-item">
+                            @item.Description
+                        </p> 
+                    </div>
+                    <div class="col-6">
+                        <a class="btn btn-info" href="#" style="margin-top: -30px">Offer</a>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</section>
