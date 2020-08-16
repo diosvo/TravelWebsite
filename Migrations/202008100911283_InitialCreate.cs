@@ -13,7 +13,7 @@
         
         public override void Down()
         {
-            AlterColumn("dbo.Services", "Image", c => c.String());
+            AlterColumn("dbo.Services", "Image", c => c.String(nullable: false, maxLength: 40));
             AlterColumn("dbo.Login", "Password", c => c.String(nullable: false, maxLength: 100));
         }
     }
