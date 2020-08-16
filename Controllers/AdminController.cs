@@ -120,13 +120,14 @@ namespace TravelWebsite.Controllers
         }
 
         [HttpPost]
-        public ActionResult Services(Services ser, string service, HttpPostedFileBase image)
+        public ActionResult Services(Services ser, string Service, HttpPostedFileBase image)
         {
             string picture = Path.Combine(Server.MapPath("~/Images"), image.FileName);
             image.SaveAs(picture);
-            var pkg = c.Services.Where(e => e.Service == service);
+
             ser.Image = picture;
-            ser.Service = service;
+            ser.Service = Service;
+
             c.Services.Add(ser);
             c.SaveChanges();
             ViewBag.sv = "Services added successfully !";
@@ -140,7 +141,7 @@ namespace TravelWebsite.Controllers
             c.SaveChanges();
 
             var list = c.Services.ToList();
-            return View();
+            return View("ServicesList", list);
         }
         #endregion
 
