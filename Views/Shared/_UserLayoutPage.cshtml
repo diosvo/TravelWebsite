@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/Styles/user_css/_user.css" />
     <link rel="stylesheet" href="~/Styles/user_css/jquery-ui.css" />
+    <link rel="stylesheet" href="~/Styles/css/stripe.css" />
 
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
@@ -25,9 +26,12 @@
         </div>
         <nav>
             <div class="d-flex justify-content-center align-content-baseline">
-                <p @Url.Action()>Home</p>
-                <p>Blogs</p>
-                <p>About Us</p>
+                <p>
+                    <a href="@Url.Action("Index", "User")">Home</a>
+                </p>
+                <p>
+                    <a href="@Url.Action("Create", "Cart")">Shopping</a>
+                </p>
             </div>
         </nav>
     </header>
@@ -36,40 +40,15 @@
         @RenderBody()
     </div>
 
-    <footer class="bg-light container p-5" style="max-width: 100%">
-        <div class="row py-5 px-3">
-            <div class="col-md-7">
-                <p>Instagram</p>
-                <div>
-                    <div class="d-flex" style="width: 150px">
-                        <img src="~/Image/dalat.jpg" width=100% />
-                        <img class="mx-3" src="~/Image/phanthiet.jpg" width=100% />
-                        <img src="~/Image/hochiminh.jpg" width=100% />
-                    </div>
-                    <div class="d-flex mt-3" style="width: 150px">
-                        <img src="~/Image/sapa.jpg" width=100% />
-                        <img class="mx-3" src="~/Image/hue.jpg" width=100% />
-                        <img src="~/Image/ninhbinh.jpg" width=100% />
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <p>Quick Link</p>
-                <div class="ql-title">
-                    <p>About Us</p>
-                    <p>Terms of Service</p>
-                    <p>Privacy</p>
-                    <p>Contact Us</p>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <p><u>Created By</u></p>
-                <div>
-                    <p>Vo Thi My Nhung</p>
-                    <p>Nguyen Vu Quynh Tram</p>
-                </div>
-            </div>
+    <footer class="bg-dark container" style="max-width: 100%">
+        <div class="text-light d-flex justify-content-center">
+            <p class="p-2 mb-0">AN TOÀN HỆ THỐNG THÔNG TIN - NHUNG & TRÂM</p>
         </div>
     </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @RenderSection("stripe", required: false)
 </body>
 </html>
