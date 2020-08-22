@@ -22,13 +22,22 @@
                                     #
                                 </th>
                                 <th>
+                                    Destination
+                                </th>
+                                <th>
                                     Offer
                                 </th>
                                 <th>
                                     Image
                                 </th>
                                 <th>
+                                    Depart
+                                </th>
+                                <th>
                                     Description
+                                </th>
+                                <th>
+                                    Price
                                 </th>
                                 <th>
                                     Actions
@@ -41,13 +50,16 @@
                             <tbody>
                                 <tr class="text-center">
                                     <td>@p.ID</td>
+                                    <td>@p.Destination</td>
                                     <td>@p.Offer</td>
                                     <td>
                                         <div>
                                             <img src="@img" style="width: 50px" />
                                         </div>
                                     </td>
+                                    <td>@p.Depart</td>
                                     <td>@p.Description</td>
+                                    <td>@p.Price</td>
                                     <td class="text-center">
                                         <div class="btn-group" role="group">
                                             <button class="btn btn-danger px-3 py-2">
@@ -55,7 +67,7 @@
                                             </button>
                                         </div>
                                     </td>
-                            </tbody>
+</tbody>
                         }
                     </table>
                 }
