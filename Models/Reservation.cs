@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 
@@ -52,9 +53,17 @@ namespace TravelWebsite.Models
 
         [Required]
         [MaxLength(40, ErrorMessage = "Max 40 char allowed")]
+        public string Destination { get; set; }
+
+        [Required]
+        [MaxLength(40, ErrorMessage = "Max 40 char allowed")]
         public string Offer { get; set; }
 
         public string Image { get; set; }
+
+        public DateTime Depart { get; set; }
+
+        public double Price { get; set; }
 
         [Required]
         [MaxLength(100, ErrorMessage = "Max 100 char allowed")]

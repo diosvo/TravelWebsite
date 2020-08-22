@@ -21,10 +21,19 @@
                                     Package Name
                                 </th>
                                 <th>
+                                    Destination
+                                </th>
+                                <th>
                                     Image
                                 </th>
                                 <th>
+                                    Depart
+                                </th>
+                                <th>
                                     Description
+                                </th>
+                                <th>
+                                    Price
                                 </th>
                                 <th>
                                     Actions
@@ -36,26 +45,31 @@
                                 <td>
                                     <select name="Offers" class="py-2 px-3">
                                         <option>Select Offer</option>
-                                        <option>Bronze Offer</option>
-                                        <option>Silver Offer</option>
-                                        <option>Golden Offer</option>
-                                        <option>Premium Offer</option>
-                                        <option>Diamond Offer</option>
-                                        <option>Platinum Offer</option>
-                                        <option>Saphire Offer</option>
+                                        <option>3 days/ 2 nights</option>
+                                        <option>2 days/ 1 nights</option>
+                                        <option>1 week</option>
                                     </select>
                                 </td>
                                 <td>
+                                    @Html.TextAreaFor(x => x.Destination)
+                                </td>
+                                <td class="p-0">
                                     <input type="file" name="image" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="date" name="depart" class="form-control text-light" />
                                 </td>
                                 <td>
                                     @Html.TextAreaFor(x => x.Description)
                                 </td>
                                 <td>
+                                    @Html.TextAreaFor(x => x.Price)
+                                </td>
+                                <td>
                                     <input type="submit" value="Add" class="btn btn-danger" />
                                 </td>
 
-                        </tbody>
+</tbody>
                     </table>
                     <h3 class="text-danger d-flex justify-content-center align-items-center m-0 mt-3">@ViewBag.pk</h3>
                 }
