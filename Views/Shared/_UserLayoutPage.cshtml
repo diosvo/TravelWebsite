@@ -25,9 +25,11 @@
         </div>
         <nav>
             <div class="d-flex justify-content-center align-content-baseline">
-                <p @Url.Action()>Home</p>
-                <p>Blogs</p>
-                <p>About Us</p>
+                    <p><a href="@Url.Action("Index")" style="text-decoration:none; color:#000000">Home</a></p> 
+                    <p><a href="@Url.Action("Services")" style="text-decoration:none; color:#000000">Services</a></p>
+                    <p><a href="@Url.Action("Packages")" style="text-decoration:none; color:#000000">Packages</a></p>
+
+                
             </div>
         </nav>
     </header>

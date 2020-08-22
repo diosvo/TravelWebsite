@@ -7,29 +7,47 @@
 <h2>Packages</h2>
 
 <div class="main" style="margin-top: 50px;"></div>
-<h1 style="text-align:center;">Our packages</h1>
+<h1 style="text-align:center;margin-top:5rem;">Our packages</h1>
+
 <section class="col-12" style="margin-top:30px;">
-    <div id="Packages" class="row container" style="margin-left:100px;">
-        @foreach(var item in Model)
+    <div class="option d-flex">
+        <span>Destination:</span>
+        <select name="Packages" class="px-3">
+            <option>Ha Noi</option>
+            <option>Sapa</option>
+            <option>Ha Long</option>
+            <option>Ninh Binh</option>
+            <option>Hue</option>
+            <option>Hoi An</option>
+            <option>Quy Nhon</option>
+        </select>
+    </div>
+    
+    <div id="Packages" class="row" style="margin-left:100px;">
+        @foreach (var item in Model)
         {
             var img = item.Image.Replace(Server.MapPath("~/Images"), "/Images");
-            <div class="col-lg-4">
-                <div class="thumpnail card">
-                    <div class="card-body">
-                        <h4 class="card-title inner list-group-item">
-                            @item.Offer;
-                        </h4>
+            <div class="container block">
+                <div class="place">
+                    <p>Destination</p>
+                </div>
+                <div class="row d-flex">
+                    <div class="col-4">
+                        <div class="img-container">
+                            <img src="@img" alt="" width=100%>
+                        </div>
                     </div>
-                    <div class="img-holder">
-                        <img class="img-fluid col-lg-12" src="@img" alt="" style="width:100%;height:200px;"/>
+                    <div class="col-5">
+                        <div>
+                            <p>ID</p>
+                            <p>Depart</p>
+                            <p>offer</p>
+                        </div>
                     </div>
-                    <div class="figure-caption card-body">
-                        <p class="card-title inner list-group-item">
-                            @item.Description
-                        </p> 
-                    </div>
-                    <div class="col-6">
-                        <a class="btn btn-info" href="#" style="margin-top: -30px">Offer</a>
+                    <div class="col-3 text-right">
+                        <p class="price">Price</p>
+                        <p class="py-5"></p>
+                        <p class="cart-btn text-center">Add to cart</p>
                     </div>
                 </div>
             </div>

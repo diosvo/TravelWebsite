@@ -39,16 +39,23 @@
                 document.getElementById("place").innerHTML = "Quy Nhon";
                 document.getElementById("view").innerHTML = "View more Quy Nhon tours";
             }
+            else if (pos > avgHeight * 7.1) {
+                document.getElementById("show").style.visibility = "hidden";
+            }
+            else {
+                document.getElementById("show").style.visibility = "visible";
+            }
         }
+     
     </script>
 </head>
 <body onscroll="winScroll()">
     <div>
-        <div class="overlay">
+        <div class="overlay" id="show">
             <p id="pos">The best place to visit in</p>
             <!--PLACE-->
             <h1 id="place">Hanoi</h1>
-            <a id="view" href="#"></a>
+            <a id="view">View more</a>
         </div>
 
         <div class="user-img-container" style="width: 100%">
