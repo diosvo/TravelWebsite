@@ -3,33 +3,42 @@
     ViewBag.Title = "Packages";
     Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
 }
-
-<h2>Packages</h2>
-
+<script>
+    var destination = document.getElementById("des");
+</script>
 <div class="main" style="margin-top: 50px;"></div>
 <h1 style="text-align:center;margin-top:5rem;">Our packages</h1>
 
+
+
+
 <section class="col-12" style="margin-top:30px;">
-    <div class="option d-flex">
-        <span>Destination:</span>
-        <select name="Packages" class="px-3">
-            <option>Ha Noi</option>
-            <option>Sapa</option>
-            <option>Ha Long</option>
-            <option>Ninh Binh</option>
-            <option>Hue</option>
-            <option>Hoi An</option>
-            <option>Quy Nhon</option>
-        </select>
-    </div>
-    
+    @using (Html.BeginForm("Packages", "User", FormMethod.Post))
+    {
+        <div class="option d-flex">
+            <span>Destination:</span>
+            <select name="Destination" class="px-3">
+                <option>Select Offer</option>
+                <option>Ha Noi</option>
+                <option>Sapa</option>
+                <option>Ha Long</option>
+                <option>Ninh Binh</option>
+                <option>Hue</option>
+                <option>Hoi An</option>
+                <option>Quy Nhon</option>
+            </select>
+            <input type="submit" value="Send"/>
+        </div>
+    }
+
     <div id="Packages" class="row" style="margin-left:100px;">
+
         @foreach (var item in Model)
         {
             var img = item.Image.Replace(Server.MapPath("~/Images"), "/Images");
             <div class="container block">
                 <div class="place">
-                    <p>Destination</p>
+                    <p>@item.Destination</p>
                 </div>
                 <div class="row d-flex">
                     <div class="col-4">
@@ -39,19 +48,20 @@
                     </div>
                     <div class="col-5">
                         <div>
-                            <p>ID</p>
-                            <p>Depart</p>
-                            <p>offer</p>
+                            <p>@item.ID</p>
+                            <p>@item.Depart</p>
+                            <p>@item.Offer</p>
                         </div>
                     </div>
                     <div class="col-3 text-right">
-                        <p class="price">Price</p>
+                        <p class="price">@item.Price</p>
                         <p class="py-5"></p>
-                        <p class="cart-btn text-center">Add to cart</p>
+                        <button class="cart-btn" type="submit">
+                            <a href="@Url.RouteUrl("Cart", new { controller = "Cart", action = "Create", id = item.ID })">Add to cart</a>
+                        </button>
                     </div>
                 </div>
             </div>
-
         }
     </div>
 </section>

@@ -13,7 +13,7 @@ namespace TravelWebsite.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202008190613475_InitialCreate"; }
+            get { return "202008221547351_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

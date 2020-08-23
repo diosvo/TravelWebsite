@@ -154,9 +154,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202008190613475_InitialCreate.cs" />
-    <Compile Include="Migrations\202008190613475_InitialCreate.designer.cs">
-      <DependentUpon>202008190613475_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202008221547351_InitialCreate.cs" />
+    <Compile Include="Migrations\202008221547351_InitialCreate.designer.cs">
+      <DependentUpon>202008221547351_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ChargeDTO.cs" />
@@ -366,8 +366,8 @@
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202008190613475_InitialCreate.resx">
-      <DependentUpon>202008190613475_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008221547351_InitialCreate.resx">
+      <DependentUpon>202008221547351_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

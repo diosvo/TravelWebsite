@@ -10,18 +10,26 @@ namespace TravelWebsite.Controllers
 {
     public class CartController : Controller
     {
+        cs c = new cs();
+        
         // GET: Cart/Create
-        public ActionResult Create()
+        public ActionResult Create(int ID)
         {
-            return View();
+            var x = c.Packages.Where(e => e.ID == ID);
+            return View(x);
         }
 
         // POST: Cart/Create
         [HttpPost]
-        public ActionResult Create(ChargeDTO chargeDTO)
+        public ActionResult Create(ChargeDTO chargeDTO, int ID)
         {
+            double price = 0;
             StripeConfiguration.ApiKey = "sk_test_51HHZalIRpf7rAmeBgc0q7aD4yiOcIaPjGCZ60FvMO4Yje4RnstURkwhMYOILHmZJwYHTzhq02OdsQDs1oP3ERsIS00k3aejALI";
-
+            var x = c.Packages.Where(e => e.ID == ID);
+            foreach(var item in x)
+            {
+                price = item.Price;
+            }
             var customerOptions = new CustomerCreateOptions
             {
                 Description = chargeDTO.CardName,
@@ -37,7 +45,7 @@ namespace TravelWebsite.Controllers
 
             var options = new ChargeCreateOptions
             {
-                Amount = 2000,
+                Amount = (long)price,
                 Currency = "usd",
                 Description = "Charge for vtmn1212@gmail.com",
                 Customer = customer.Id

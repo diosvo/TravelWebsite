@@ -27,5 +27,11 @@ namespace TravelWebsite.Controllers
             var x = c.Packages .ToList();
             return View(x);
         }
+        [HttpPost]
+        public ActionResult Packages(string Destination)
+        {
+            var res = c.Packages.Where(e => e.Destination == Destination);
+            return View("Packages", res);
+        }
     }
 }   

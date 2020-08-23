@@ -26,6 +26,13 @@ namespace TravelWebsite
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
             );
+
+            // Route Cart
+            routes.MapRoute(
+                name: "Cart",
+                url:"{controller}/{action}/{id}",
+                defaults: new { controller = "Cart", action = "Create", id = UrlParameter.Optional }
+                );
         }
     }
 }

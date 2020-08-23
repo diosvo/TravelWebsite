@@ -7,6 +7,7 @@
 <html>
 <head>
     <script>
+        var place = "";
         window.onscroll = function () { winScroll() };
         function winScroll() {
             var avgHeight = 620;
@@ -14,18 +15,22 @@
             if (pos >= 0 && pos < avgHeight) {
                 document.getElementById("place").innerHTML = "Ha Noi";
                 document.getElementById("view").innerHTML = "View more Ha Noi tours";
+                place = "Ha noi";
             }
             else if (pos < avgHeight * 2 - 300) {
                 document.getElementById("place").innerHTML = "Sapa";
                 document.getElementById("view").innerHTML = "View more Sapa tours";
+                place = "Sapa";
             }
             else if (pos < avgHeight * 3 - 300) {
                 document.getElementById("place").innerHTML = "Ha Long";
                 document.getElementById("view").innerHTML = "View more Ha Long tours";
+                place = "Ha Long"
             }
             else if (pos < avgHeight * 4 - 300) {
                 document.getElementById("place").innerHTML = "Ninh Binh";
                 document.getElementById("view").innerHTML = "View more Ninh Binh tours";
+                place = "Ninh Binh";
             }
             else if (pos < avgHeight * 5 - 300) {
                 document.getElementById("place").innerHTML = "Hue";
@@ -55,7 +60,7 @@
             <p id="pos">The best place to visit in</p>
             <!--PLACE-->
             <h1 id="place">Hanoi</h1>
-            <a id="view">View more</a>
+            <a id="view" href="@Url.Action("Packages", "User")">View more</a>
         </div>
 
         <div class="user-img-container" style="width: 100%">
