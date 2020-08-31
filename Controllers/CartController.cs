@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TravelWebsite.Models;
+using System.Net;
+using System.Net.Mail;
 
 namespace TravelWebsite.Controllers
 {
@@ -55,8 +57,32 @@ namespace TravelWebsite.Controllers
 
             var model = new ChargeViewModel();
             model.ChargeId = charge.Id;
+            model.Name = customer.Name;
+            model.Email = customer.Email;
+            // Send mail for client
+            MailMessage mail = new MailMessage();
+            mail.From = new System.Net.Mail.MailAddress("demotravelguide@gmail.com");
+
+            SmtpClient smtp = new SmtpClient();
+            smtp.Port = 587;
+            smtp.EnableSsl = true;
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new NetworkCredential(mail.From.ToString(), "daylamatkhaumanhduocchua?");
+            smtp.Host = "smtp.gmail.com";
+
+
+            //recipient address
+            mail.To.Add(new MailAddress(customer.Email));
+
+            //Formatted mail body;
+            string st = "hù";
+
+            mail.Body = st;
+            smtp.Send(mail);
 
             return View("OrderStatus", model);
         }
+
     }
 }

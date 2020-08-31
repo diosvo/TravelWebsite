@@ -85,16 +85,6 @@ div.myFont {
     border: 1px solid #e79a27;
 }
 
-.info {
-    margin: 0 auto;
-    padding: 40px 15px 30px 15px;
-    color: #FFF;
-    font-size: 14px;
-    background: #000;
-    display: block;
-    overflow: hidden;
-}
-
 
 
 .user-img-container img {
@@ -182,4 +172,23 @@ nav a:hover {
 
 footer {
     font-size: 12px;
+}
+.col-6 {
+    padding:0 2rem 2rem 2rem;
+}
+.col-6 > p {
+    font-size: large;
+    font-weight:bold;
+    padding-right: 2rem;
+    /*border:1px solid green;*/
+}
+
+.col-6 > p > i {
+    padding: 1rem;
+}
+.col-6 > p > i.fa-dollar-sign {
+    padding: 0;
+}
+.info1 {
+    border-right: 2px dashed black;
 }

@@ -1,7 +1,8 @@
-﻿    @using TravelWebsite.Models
+﻿@using TravelWebsite.Models
 @model ChargeViewModel
 @{
     ViewBag.Title = "OrderStatus";
+    Layout = "~/Views/Shared/_UserLayoutPage.cshtml";
 }
 
 <!DOCTYPE html>
@@ -17,5 +18,7 @@
         <span> Charge ID: </span>
         <span>@Model.ChargeId</span>
     </p>
+    <p>@Model.Name</p>
+    <p>@Model.Email</p>
 </body>
 </html>

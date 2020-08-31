@@ -36,6 +36,7 @@
         @foreach (var item in Model)
         {
             var img = item.Image.Replace(Server.MapPath("~/Images"), "/Images");
+            string price = ((@item.Price) / 100).ToString() + ".00";
             <div class="container block">
                 <div class="place">
                     <p>@item.Destination</p>
@@ -54,7 +55,7 @@
                         </div>
                     </div>
                     <div class="col-3 text-right">
-                        <p class="price">@item.Price</p>
+                        <p class="price">@price</p>
                         <p class="py-5"></p>
                         <button class="cart-btn" type="submit">
                             <a href="@Url.RouteUrl("Cart", new { controller = "Cart", action = "Create", id = item.ID })">Add to cart</a>

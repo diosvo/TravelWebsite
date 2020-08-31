@@ -83,19 +83,20 @@
 <div class="container py-4 row" style="margin: 0 auto;width: 100%;">
     @foreach (var item in Model)
     {
-    <div class="col-6">
-        <div>
-            <h2 class="pb-3 text-center">Information</h2>
+        string price = ((@item.Price) / 100).ToString() + ".00";
+        <div class="col-6 info1">
+            <div>
+                <h2 class="text-center py-2">Information</h2>
+            </div>
+            <p class="py-2" style="font-size:25px;"><i class="fas fa-map-marker-alt"></i>Destination: @item.Destination</p>
+            <p><i class="fas fa-calendar-alt"></i>@item.Offer</p>
+            <p><i class="fas fa-clock"></i>@item.Depart</p>
+            <p class="py-3"><i class="fas fa-pen description" style="padding-top: 0;"></i>@item.Description</p>
+            <p class="text-right" style="font-size:25px;">Price: @price <i class="fas fa-dollar-sign"></i></p>
         </div>
-        <p>@item.Destination</p>
-        <p>@item.Depart</p>
-        <p>@item.Description</p>
-        <p>@item.Offer</p>
-        <p>@item.Price</p>
-    </div>
         <div class="col-6">
             <div>
-                <h2 class="pb-3 text-center">Checkout</h2>
+                <h2 class="py-2 text-center">Checkout</h2>
             </div>
 
             <form action="/Cart/Create/@item.ID" method="post" id="payment-form">
