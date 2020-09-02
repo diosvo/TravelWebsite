@@ -8,17 +8,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Travel Guide</title>
+    <title>Booking Status</title>
     <meta name="viewport" content="width=device-width, initial-scale = 1" />
     <meta charset="utf-8" />
 </head>
 <body>
-    <h2>Order Status</h2>
-    <p>
-        <span> Charge ID: </span>
-        <span>@Model.ChargeId</span>
-    </p>
-    <p>@Model.Name</p>
-    <p>@Model.Email</p>
+    <div style="width: 500px; margin:0 auto;">
+        <div class="status-container d-flex flex-column justify-content-center align-items-center">
+            <div><img src="~/Image/destination.png" alt="booking-status" width=100%></div>
+            <h3>Awesome!</h3>
+            <p class="my-2 text-center text-secondary">Your order has been comfirmed. </br> Check your email: <span>@Model.Email</span> for details.</p>
+        </div>
+    </div>
 </body>
 </html>

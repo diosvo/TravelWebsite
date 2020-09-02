@@ -174,17 +174,15 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Image\cnntravel.png" />
     <Content Include="Image\dalat.jpg" />
+    <Content Include="Image\destination.png" />
     <Content Include="Image\diosvo.jpg" />
-    <Content Include="Image\facebook.png" />
-    <Content Include="Image\google.png" />
+    <Content Include="Image\fav.ico" />
     <Content Include="Image\halong.jpg" />
     <Content Include="Image\hanoi.jpg" />
     <Content Include="Image\hochiminh.jpg" />
     <Content Include="Image\hoian.jpg" />
     <Content Include="Image\hue.jpg" />
-    <Content Include="Image\instagram.png" />
     <Content Include="Image\logo.png" />
     <Content Include="Image\marthnyuq.jpg" />
     <Content Include="Image\nhatrang.jpg" />
@@ -193,7 +191,6 @@
     <Content Include="Image\phuquoc.jpg" />
     <Content Include="Image\quynhon.jpg" />
     <Content Include="Image\sapa.jpg" />
-    <Content Include="Image\twitter.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />

@@ -13,7 +13,7 @@ namespace TravelWebsite.Controllers
     public class CartController : Controller
     {
         cs c = new cs();
-        
+
         // GET: Cart/Create
         public ActionResult Create(int ID)
         {
@@ -28,7 +28,7 @@ namespace TravelWebsite.Controllers
             double price = 0;
             StripeConfiguration.ApiKey = "sk_test_51HHZalIRpf7rAmeBgc0q7aD4yiOcIaPjGCZ60FvMO4Yje4RnstURkwhMYOILHmZJwYHTzhq02OdsQDs1oP3ERsIS00k3aejALI";
             var x = c.Packages.Where(e => e.ID == ID);
-            foreach(var item in x)
+            foreach (var item in x)
             {
                 price = item.Price;
             }
@@ -68,15 +68,14 @@ namespace TravelWebsite.Controllers
             smtp.EnableSsl = true;
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential(mail.From.ToString(), "daylamatkhaumanhduocchua?");
+            smtp.Credentials = new NetworkCredential(mail.From.ToString(), "strongpassword");
             smtp.Host = "smtp.gmail.com";
 
-
-            //recipient address
+            // Recipient address
             mail.To.Add(new MailAddress(customer.Email));
 
-            //Formatted mail body;
-            string st = "hù";
+            // Formatted mail body;
+            string st = "Booking Successfully. Thank you for choosing our service! Have a nice day";
 
             mail.Body = st;
             smtp.Send(mail);

@@ -24,7 +24,7 @@ namespace TravelWebsite.Controllers
         //Packages
         public ActionResult Packages()
         {
-            var x = c.Packages .ToList();
+            var x = c.Packages.ToList();
             return View(x);
         }
         [HttpPost]
