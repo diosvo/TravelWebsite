@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using TravelWebsite.Models;
 using System.Net;
 using System.Net.Mail;
+using System.Text;
 
 namespace TravelWebsite.Controllers
 {
@@ -18,6 +19,7 @@ namespace TravelWebsite.Controllers
         public ActionResult Create(int ID)
         {
             var x = c.Packages.Where(e => e.ID == ID);
+
             return View(x);
         }
 
@@ -26,11 +28,13 @@ namespace TravelWebsite.Controllers
         public ActionResult Create(ChargeDTO chargeDTO, int ID)
         {
             double price = 0;
+            StringBuilder sb = new StringBuilder("Thank you for using our services\n", 255);
             StripeConfiguration.ApiKey = "sk_test_51HHZalIRpf7rAmeBgc0q7aD4yiOcIaPjGCZ60FvMO4Yje4RnstURkwhMYOILHmZJwYHTzhq02OdsQDs1oP3ERsIS00k3aejALI";
             var x = c.Packages.Where(e => e.ID == ID);
             foreach(var item in x)
             {
                 price = item.Price;
+                sb.AppendFormat("Destination: {0}\nOffer: {1}\nDepart: {2}\nYou have paid {3} for us.\nYour tour has been scheduled\nPlease feel free to contact me if you have any question. I would be ready to give necessary assistance.\nBest Regards,\nTRAVEL GUIDE\n", item.Destination, item.Offer, item.Depart, item.Price);
             }
             var customerOptions = new CustomerCreateOptions
             {
@@ -76,7 +80,8 @@ namespace TravelWebsite.Controllers
             mail.To.Add(new MailAddress(customer.Email));
 
             //Formatted mail body;
-            string st = "hù";
+
+            string st = "Dear " + customer.Name + "\n" + sb.ToString();
 
             mail.Body = st;
             smtp.Send(mail);
