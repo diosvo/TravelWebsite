@@ -1,0 +1,25 @@
+﻿.ticket {
+    border-radius: 16px;
+    box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.25);
+}
+
+    .ticket .col-md-5 {
+        padding: 2.25rem 3rem 1rem 2rem;
+
+        border-right: .75px solid #dddddd;
+        border-bottom-left-radius: 16px;
+        border-top-left-radius: 16px;
+
+        background: #F1F6FF;
+    }
+
+    .ticket .col-md-7 {
+        padding: 2.25rem 2rem 1rem 2rem;
+
+        border-bottom-right-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+
+.form-control {
+    font-size: 14px;
+}

@@ -8,17 +8,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Travel Guide</title>
+    <title>Booking Status</title>
     <meta name="viewport" content="width=device-width, initial-scale = 1" />
     <meta charset="utf-8" />
 </head>
 <body>
-    <h2>Order Status</h2>
-    <p>
-        <span> Charge ID: </span>
-        <span>@Model.ChargeId</span>
-    </p>
-    <p>@Model.Name</p>
-    <p>@Model.Email</p>
+    <div style="width: 600px; margin:0 auto; padding: 4.1rem 0">
+        <div class="status-container d-flex flex-column justify-content-center align-items-center">
+            <div class="my-5" style="width: 400px"><img src="~/Image/awesome.png" alt="booking-status" width=100%></div>
+            <div class="px-5 text-center text-dark" style="font-size: 14px;">
+                <p>Khách hàng đã thanh toán thành công. </br> Kiểm tra email: @Model.Email để xác nhận.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

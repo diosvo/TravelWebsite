@@ -1,36 +1,38 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "_UserLayoutPage";
 }
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Travel Guide</title>
+    <title>NT | Travel Guides</title>
     <meta name="viewport" content="width=device-width, initial-scale = 1" />
     <meta charset="utf-8" />
 
-    <!--CSS link-->
+    <!-- CSS -->
     <link rel="stylesheet" href="~/Styles/user_css/fontawesome.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/Styles/user_css/_user.css" />
-    <link rel="stylesheet" href="~/Styles/user_css/jquery-ui.css" />
-    <link rel="stylesheet" href="~/Styles/css/stripe.css" />
+    <link rel="stylesheet" href="~/Styles/user_css/ticket.css" />
 
+    <!-- Icon -->
+    <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/vietnam-landmark-and-culture-flat-design/64/Vietnam_flag_nation-512.png" />
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
+
 <body>
-    <header class="bg-light">
-        <div class="pt-2" style="width: 100px; margin:0 auto; ">
-            <img src="~/Image/logo.png" width=100% />
+    <header style="background: white; box-shadow: 0 0 20px rgba(26,26,33,.1)">
+        <div class="pt-2" style="width: 120px; margin:0 auto; ">
+            <a href="/"><img src="https://svietnam.travel/wp-content/uploads/2020/01/logo-svietnam-travel.png" alt="logo" width="100%" /></a>
         </div>
+
         <nav>
             <div class="d-flex justify-content-center align-content-baseline">
                 <p>
-                    <a href="@Url.Action("Index", "User")">Home</a>
+                    <a href="@Url.Action("Index", "User")">Trang chủ</a>
                 </p>
                 <p>
-                    <a href="@Url.Action("Packages", "User")">Shopping</a>
+                    <a href="@Url.Action("Packages", "User")">Booking</a>
                 </p>
             </div>
         </nav>
@@ -40,9 +42,9 @@
         @RenderBody()
     </div>
 
-    <footer class="bg-dark container" style="max-width: 100%">
+    <footer class="bg-dark" style="max-width: 100%f">
         <div class="text-light d-flex justify-content-center">
-            <p class="p-2 mb-0">AN TOÀN HỆ THỐNG THÔNG TIN - NHUNG & TRÂM</p>
+            <p class="p-2 mb-0" style="font-size: 13px">AN TOÀN HỆ THỐNG THÔNG TIN - MYNHUNG V & QUỲNH TRÂM</p>
         </div>
     </footer>
 
@@ -51,4 +53,5 @@
     @RenderSection("scripts", required: false)
     @RenderSection("stripe", required: false)
 </body>
+
 </html>
