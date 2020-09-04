@@ -298,3 +298,7 @@ h1 {
 .book-container .content .btn:hover a {
     color: #0a4870;
 }
+
+.payment-details .form-control {
+    font-size: 15px !important;
+}

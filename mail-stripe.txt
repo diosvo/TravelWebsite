@@ -1,0 +1,4 @@
+-- Stripe Dashboard: https://dashboard.stripe.com/test/dashboard
+
+-- Email: demotravelwebsite@gmail.com
+password: 

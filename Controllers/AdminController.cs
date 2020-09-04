@@ -105,46 +105,6 @@ namespace TravelWebsite.Controllers
         }
         #endregion
 
-        #region /* Services */
-        [HttpGet]
-        public ActionResult ServicesList()
-        {
-            var x = c.Services.ToList();
-            return View(x);
-        }
-
-        [HttpGet]
-        public ActionResult Services()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Services(Services ser, string Service, HttpPostedFileBase image)
-        {
-            string picture = Path.Combine(Server.MapPath("~/Images"), image.FileName);
-            image.SaveAs(picture);
-
-            ser.Image = picture;
-            ser.Service = Service;
-
-            c.Services.Add(ser);
-            c.SaveChanges();
-            ViewBag.sv = "Services added successfully !";
-            return RedirectToAction("ServicesList");
-        }
-
-        public ActionResult DeleteService(int id)
-        {
-            var res = c.Services.Where(x => x.ID == id).First();
-            c.Services.Remove(res);
-            c.SaveChanges();
-
-            var list = c.Services.ToList();
-            return View("ServicesList", list);
-        }
-        #endregion
-
         #region /* User Profile */
         [HttpGet]
         public ActionResult UserProfile()

@@ -15,18 +15,14 @@ namespace TravelWebsite.Controllers
         {
             return View();
         }
-        //Services
-        public ActionResult Services()
-        {
-            var x = c.Services.ToList();
-            return View(x);
-        }
+
         //Packages
         public ActionResult Packages()
         {
             var x = c.Packages.ToList();
             return View(x);
         }
+
         [HttpPost]
         public ActionResult Packages(string Destination)
         {
