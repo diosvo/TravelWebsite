@@ -19,6 +19,7 @@ namespace TravelWebsite.Controllers
         public ActionResult Create(int ID)
         {
             var x = c.Packages.Where(e => e.ID == ID);
+
             return View(x);
         }
 
@@ -27,13 +28,14 @@ namespace TravelWebsite.Controllers
         public ActionResult Create(ChargeDTO chargeDTO, int ID)
         {
             double price = 0;
+            StringBuilder sb = new StringBuilder();
             StripeConfiguration.ApiKey = "sk_test_51HHZalIRpf7rAmeBgc0q7aD4yiOcIaPjGCZ60FvMO4Yje4RnstURkwhMYOILHmZJwYHTzhq02OdsQDs1oP3ERsIS00k3aejALI";
             var x = c.Packages.Where(e => e.ID == ID);
             foreach (var item in x)
             {
                 price = item.Price * 4.3478;
                 sb.AppendFormat("NT Travel Guide xin cảm ơn quý khách đã sử dụng dịch vụ của chúng tôi. " +
-                    "Quý khách đã thanh toán thành công. Xin vui lòng kiểm tra lại các thông tin bên dưới: \n" +
+                    "Quý khách đã thanh toán thành công. Xin vui lòng kiểm tra lại các thông tin sau: \n" +
                     "Điểm đến: {0}\n" +
                     "Ngày xuất phát: {3}-{2}-{1}\n" +
                     "Chuyến đi trong vòng: {4}\n" +
@@ -41,7 +43,6 @@ namespace TravelWebsite.Controllers
                     "Trân trọng,\nNT Travel Guide\n" +
                     "Nếu những thông tin trên có sai sót hoặc quý khách có thắc mắc về chuyến đi, xin phản hồi lại email này.\n" +
                     "\nHoặc gọi vào hotline: 028-38364748 để được hỗ trợ tốt nhất.\nXin chân thành cảm ơn." ,item.Destination, item.Depart.Year, item.Depart.Month, item.Depart.Day, item.Offer, item.ID);
-
             }
             var customerOptions = new CustomerCreateOptions
             {
